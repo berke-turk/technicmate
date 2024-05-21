@@ -43,7 +43,7 @@ class LoginPasswordView extends StatelessWidget {
                 RichText(
                   text: TextSpan(
                     text: "${model.data?.rootMail}",
-                    style: GoogleFonts.inter(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: GoogleFonts.inter(fontSize: 20, fontWeight: FontWeight.bold, color: Palette.white),
                     children: [
                       TextSpan(
                         text: "${model.data?.studentMail}",
@@ -78,6 +78,7 @@ class LoginPasswordView extends StatelessWidget {
                     const SizedBox(height: 10),
                     TextFormField(
                       controller: controller.passwordController,
+                      obscureText: true, // gizle
                       decoration: InputDecoration(
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(6), borderSide: BorderSide.none),
                         filled: true,
